@@ -1,0 +1,6 @@
+_roku()
+{
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    COMPREPLY=( $(compgen -W "home rev fwd play select left right down up back instantreplay info backspace search enter" -- $cur) )
+}
+complete -F _roku roku
